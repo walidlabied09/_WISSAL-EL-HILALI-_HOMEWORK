@@ -131,24 +131,24 @@ Prompts the user to enter a title and displays tasks that match the title.
 ```bash
 ./todo.sh update
 Liste des tâches :
-ID: 1 - Titre: Acheter des courses - Description: Acheter du lait, des œufs, et du pain - Localisation: Supermarché - Date: 2024-06-01 - Complétée: non
-ID: 2 - Titre: Faire les devoirs de maths - Description: Résoudre les exercices du chapitre 3 - Localisation: Maison - Date: 2024-06-02 - Complétée: non
-ID: 3 - Titre: Lire un livre - Description: Lire 'Le Petit Prince' de Saint-Exupéry - Localisation: Maison - Date: 2024-06-04 - Complétée: non
-ID: 4 - Titre: Football - Description: 11 VS 11 - Localisation: Rabat - Date: 2024-06-01 - Complétée: non
-ID: 5 - Titre: Appeler le service client - Description: Appeler le service client pour résoudre un problème de facturation. - Localisation: Maison - Date: 2024-06-04 - Complétée: non
-ID: 6 - Titre: Réserver un billet d'avion - Description: Réserver un billet pour le voyage d'affaires à Paris. - Localisation: Internet - Date: 2024-06-06 - Complétée: non
-ID: 7 - Titre: Faire du sport - Description: Aller courir au parc pendant 30 minutes. - Localisation: Parc - Date: 2024-06-01 - Complétée: oui
-ID: 8 - Titre: Lire un chapitre du livre - Description: Lire le chapitre 5 du livre "L'art de la simplicité". - Localisation: Maison - Date: 2024-06-02 - Complétée: non
-ID: 9 - Titre: Organiser une réunion - Description: Organiser une réunion avec l'équipe de marketing pour discuter de la nouvelle campagne. - Localisation: Salle de conférence 2 - Date: 2024-06-03 - Complétée: non
-ID: 10 - Titre: Planter des fleurs - Description: Planter des tulipes dans le jardin. - Localisation: Jardin - Date: 2024-06-04 - Complétée: non
-Entrez l'ID de la tâche à mettre à jour : 1
-Entrez les nouvelles informations pour la tâche. Laissez vide pour garder les valeurs actuelles.
-Nouveau titre : Acheter des courses alimentaires
-Nouvelle description : Acheter du lait, des œufs, du pain et des fruits.
-Nouvelle localisation : Supermarché local
-Nouvelle date (format YYYY-MM-DD) : 2024-06-02
-Marqueur de complétion (oui/non) :
-Tâche mise à jour avec succès.
+# ID: 1 - Titre: Acheter des courses - Description: Acheter du lait, des œufs, et du pain - Localisation: Supermarché - Date: 2024-06-01 - Complétée: non
+# ID: 2 - Titre: Faire les devoirs de maths - Description: Résoudre les exercices du chapitre 3 - Localisation: Maison - Date: 2024-06-02 - Complétée: non
+# ID: 3 - Titre: Lire un livre - Description: Lire 'Le Petit Prince' de Saint-Exupéry - Localisation: Maison - Date: 2024-06-04 - Complétée: non
+# ID: 4 - Titre: Football - Description: 11 VS 11 - Localisation: Rabat - Date: 2024-06-01 - Complétée: non
+# ID: 5 - Titre: Appeler le service client - Description: Appeler le service client pour résoudre un problème de facturation. - Localisation: Maison - Date: 2024-06-04 - Complétée: non
+# ID: 6 - Titre: Réserver un billet d'avion - Description: Réserver un billet pour le voyage d'affaires à Paris. - Localisation: Internet - Date: 2024-06-06 - Complétée: non
+# ID: 7 - Titre: Faire du sport - Description: Aller courir au parc pendant 30 minutes. - Localisation: Parc - Date: 2024-06-01 - Complétée: oui
+# ID: 8 - Titre: Lire un chapitre du livre - Description: Lire le chapitre 5 du livre "L'art de la simplicité". - Localisation: Maison - Date: 2024-06-02 - Complétée: non
+# ID: 9 - Titre: Organiser une réunion - Description: Organiser une réunion avec l'équipe de marketing pour discuter de la nouvelle campagne. - Localisation: Salle de conférence 2 - Date: 2024-06-03 - Complétée: non
+# ID: 10 - Titre: Planter des fleurs - Description: Planter des tulipes dans le jardin. - Localisation: Jardin - Date: 2024-06-04 - Complétée: non
+# Entrez l'ID de la tâche à mettre à jour : 1
+# Entrez les nouvelles informations pour la tâche. Laissez vide pour garder les valeurs actuelles.
+# Nouveau titre : Acheter des courses alimentaires
+# Nouvelle description : Acheter du lait, des œufs, du pain et des fruits.
+# Nouvelle localisation : Supermarché local
+# Nouvelle date (format YYYY-MM-DD) : 2024-06-02
+# Marqueur de complétion (oui/non) :
+# Tâche mise à jour avec succès.
 ```
 ### Error Handling
 - The script includes error handling for invalid input, such as empty titles, invalid dates, and non-existent task IDs.
