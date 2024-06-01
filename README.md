@@ -106,7 +106,17 @@ Prompts the user to enter a date and lists tasks scheduled for that day, categor
 ./todo.sh search
 ```
 Prompts the user to enter a title and displays tasks that match the title.
-
+### Example Workflow
+Add a Task:
+```bash
+./todo.sh create
+# Suivez les invites pour entrer les détails de la tâche :
+# Titre : Acheter des courses
+# Description : Acheter du lait, du pain, des œufs et des fruits.
+# Localisation : Supermarché local
+# Date d'échéance : 2024-06-02
+# Complétion : non
+```
 ### Error Handling
     -The script includes error handling for invalid input, such as empty titles, invalid dates, and non-existent task IDs.
     -Default values are provided for some fields if the user input is invalid or left empty.
