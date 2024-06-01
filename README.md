@@ -6,7 +6,7 @@ This Bash script serves as a task manager, allowing users to efficiently organiz
 
 ## Design Choices
 ### Data Storage
-- **Text File:** Tasks are stored in a text file named tasks.txt. This format is chosen for its simplicity and ease of use with Bash commands.
+- **Text File:** Tasks are stored in a text file named `tasks.txt`. This format is chosen for its simplicity and ease of use with Bash commands.
 - **Fields:** Each task in the text file has the following fields:
     - `id`: Unique identifier for the task.
     - `title`: Title of the task.
