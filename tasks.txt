@@ -1,0 +1,10 @@
+1,Acheter des courses,Acheter du lait, des œufs, et du pain,Supermarché,2024-06-01,non
+2,Faire les devoirs de maths,Résoudre les exercices du chapitre 3,Maison,2024-06-02,non
+3,Lire un livre,Lire 'Le Petit Prince' de Saint-Exupéry,Maison,2024-06-04,non
+4,Football,11 VS 11,Rabat,2024-06-01,non
+5,Appeler le service client,Appeler le service client pour résoudre un problème de facturation.,Maison,2024-06-04,non
+6,Réserver un billet d'avion, Réserver un billet pour le voyage d'affaires à Paris.,Internet,2024-06-06,non
+7,Faire du sport,Aller courir au parc pendant 30 minutes.,Parc,2024-06-01,oui
+8,Lire un chapitre du livre,Lire le chapitre 5 du livre "L'art de la simplicité".,Maison,2024-06-02,non
+9,Organiser une réunion,Organiser une réunion avec l'équipe de marketing pour discuter de la nouvelle campagne.,Salle de conférence 2,2024-06-03,non
+10,Planter des fleurs,Planter des tulipes dans le jardin.,Jardin,2024-06-04,non
