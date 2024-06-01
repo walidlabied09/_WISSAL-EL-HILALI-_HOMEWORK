@@ -89,7 +89,7 @@ Displays the list of tasks and prompts the user to enter the ID of the task to u
 ```
 Displays the list of tasks and prompts the user to enter the ID of the task to delete.
 
-- ***Show a Task:**
+- **Show a Task:**
 ```bash
 ./todo.sh show
 ```
