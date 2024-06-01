@@ -1,102 +1,114 @@
 README
-# Task Manager
 
-This project is a simple task manager that performs CRUD (Create, Read, Update, Delete) operations on tasks. The tasks are stored in a text file (`file.txt`) and manipulated using Bash scripts.
+# Overview
+
+This Bash script serves as a task manager, allowing users to efficiently organize their tasks. It provides functionality for creating, updating, deleting, showing, and listing tasks. Tasks are stored in a text file (`tasks.txt`) and identified by unique IDs.
 
 ## Design Choices
-
 ### Data Storage
-Tasks are stored in a plain text file called `file.txt`. Each task is represented as a single line in the following format:
-
-- **id**: Unique identifier for each task.
-- **title**: Title of the task.
-- **description**: Description of the task.
-- **location**: Location of the task.
-- **finishDate**: Due date and time for the task.
-- **isCompleted**: Status of the task (0 for incomplete, 1 for complete).
-
+- **Text File:** Tasks are stored in a text file named tasks.txt. This format is chosen for its simplicity and ease of use with Bash commands.
+- **Fields:** Each task in the text file has the following fields:
+    - `id`: Unique identifier for the task.
+    - `title`: Title of the task.
+    - `description`: Description of the task.
+    - `location`: Location where the task is to be performed.
+    - `due_date`: Due date of the task in YYYY-MM-DD format.
+    - `completion`: Marker indicating whether the task is completed (yes/no).
 ### Code Organization
-The project is organized into several Bash scripts:
+The todo.sh script is organized into several key functions, each responsible for a specific operation on the todo list. Here is a detailed overview of the organization and functionality:
 
-- **main.sh**: Main script to run the task manager.
-- **add.sh**: Script containing the function to add a new task.
-- **delete.sh**: Script containing the function to delete a task by ID.
-- **get.sh**: Script containing functions to get tasks by ID, get all tasks, list tasks by day, and search tasks by title.
-- **update.sh**: Script containing the function to update a task.
+- **Initialization:**
+`ID_FILE`: The script uses a file named `current_id.txt` to keep track of the current highest task ID.
+If `current_id.txt` does not exist, it initializes the current ID to 0. This ensures each new task gets a unique identifier.
 
-## Usage
+- **Main Functionality:**
+The script's main functionality is divided into several functions that correspond to different actions users can perform on their todo list. Each function is designed to handle specific tasks, ensuring modular and maintainable code.
 
-### Adding a Task
-To add a new task, use the `-a` option followed by the task details:
+- **Functions:**
 
-./main.sh -a --title='Buy groceries' --description='Buy milk, eggs, and bread' --location='Supermarket' --finishDate='13/03/2024 10:00'
+    - `create_task:`
+        Prompts the user for task details, including title, description, location, due date, and completion status.
+        Validates required fields (title and due date) and increments the task ID.
+        Saves the new task to tasks.txt and updates current_id.txt.
+    - `update_task:`
+        Lists all tasks and prompts the user to enter the ID of the task they want to update.
+        Allows the user to update the title, description, location, due date, and completion status.
+        Updates the task in tasks.txt with the new information.
+    - `delete_task:`
+        Lists all tasks and prompts the user to enter the ID of the task they want to delete.
+        Removes the specified task from tasks.txt.
+    - `show_task:`
+        Prompts the user to enter the title of the task they want to view.
+        Displays the details of the specified task.
+    - `list_tasks_by_day:`
+        Prompts the user to enter a date.
+        Lists all tasks due on the specified date, categorized into completed and uncompleted tasks.
+    - `search_task_by_title:`
+        Prompts the user to enter the title of the task they want to search for.
+        Lists all tasks matching the specified title.
+    - `list_today_tasks:`
+        Automatically lists all tasks due today, categorized into completed and uncompleted tasks.
+- **Command Line Options:**
+    The script accepts command-line arguments to perform different actions:
+    - `create:` Add a new task.
+    - `update:` Update an existing task.
+    - `delete:` Delete a task.
+    - `show:` Display a specific task by title.
+    - `listbyday:` List tasks due on a specific date.
+    - `search:` Search for tasks by title.
+    If no arguments are provided, it lists tasks due today.
 
-### Updating a Task
-To update an existing task, use the -u option followed by the task ID and the updated details:
+## Script Usage
 
-./main.sh -u 1 --title='Updated Task Title' --isCompleted=1
+### Running the Script
+Make sure the script has executable permissions. You can grant execute permission using the following command: chmod +x todo.sh
 
-### Deleting a Task
-To delete a task by its ID, use the -delete option followed by the task ID:
-./main.sh -delete 1
+### Commands
+- **List Today's Tasks (Default)**:
 
-### Getting a Task by ID
-To get a task by its ID, use the -id option followed by the task ID:
-./main.sh -id 2
+```bash
+./todo.sh
+```
+Lists all tasks scheduled for today, categorized by completion status.
 
-### Listing All Tasks
-To list all tasks, use the -tasks option:
-./main.sh -tasks
-### Listing Tasks by Day
-To list tasks for a specific day, use the -day option followed by the date in dd/mm/yyyy format:
+- **Create a Task**:
+```bash
+./todo.sh create
+```
+Prompts the user to enter task details and adds the task to the list.
 
-./main.sh -day '13/03/2024'
+- **Update a Task**:
+```bash
+./todo.sh update
+```
+Displays the list of tasks and prompts the user to enter the ID of the task to update. Allows modification of task details.
 
-### Searching for a Task by Title
-To search for a task by its title, use the -title option followed by the search term:
-./main.sh -title 'Task 1'
+- **Delete a Task**:
+```bash
+./todo.sh delete
+```
+Displays the list of tasks and prompts the user to enter the ID of the task to delete.
 
-### Displaying Help
-To display usage information, use the --help or -h option:
-./main.sh --help
+- ***Show a Task**:
+```bash
+./todo.sh show
+```
+Prompts the user to enter the title of the task to display its details.
+
+- ***List Tasks by Day***:
+```bash
+./todo.sh listbyday
+```
+Prompts the user to enter a date and lists tasks scheduled for that day, categorized by completion status.
+
+- ***Search Tasks by Title***:
+```bash
+./todo.sh search
+```
+Prompts the user to enter a title and displays tasks that match the title.
 
 ### Error Handling
-The scripts include validation checks for required fields and correct date-time formats. Error messages are redirected to standard error.
+    -The script includes error handling for invalid input, such as empty titles, invalid dates, and non-existent task IDs.
+    -Default values are provided for some fields if the user input is invalid or left empty.
 
-### Scripts Explanation
-#main.sh
-The main script acts as the entry point for the task manager. It includes the following functionalities:
-
-Adding a task
-Updating a task
-Deleting a task
-Retrieving a task by ID
-Listing all tasks
-Listing tasks for a specific day
-Searching for tasks by title
-Displaying help information
-
-#add.sh
-The script contains functions for adding a new task and updating an existing task:
-
-addTask(): Adds a new task with provided details.
-updateTask(): Updates an existing task with new details.
-
-#delete.sh
-The script contains a function to delete a task by its ID:
-
-deleteTaskById(): Deletes a task with the specified ID.
-
-#get.sh
-The script contains functions to retrieve tasks:
-
-getTaskById(): Retrieves a task by its ID.
-getAllTask(): Lists all tasks.
-listTasksByDay(): Lists tasks for a specific day, separating completed and uncompleted tasks.
-searchForTitle(): Searches for tasks by title.
-
-#update.sh
-The script contains a function to update a task by its ID:
-
-updateTask(): Updates a task with the specified ID and new details.
 
