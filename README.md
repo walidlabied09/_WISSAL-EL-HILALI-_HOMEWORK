@@ -118,7 +118,7 @@ Add a Task:
 # Complétion : non
 ```
 ### Error Handling
-    -The script includes error handling for invalid input, such as empty titles, invalid dates, and non-existent task IDs.
-    -Default values are provided for some fields if the user input is invalid or left empty.
+-The script includes error handling for invalid input, such as empty titles, invalid dates, and non-existent task IDs.
+-Default values are provided for some fields if the user input is invalid or left empty.
 
 
