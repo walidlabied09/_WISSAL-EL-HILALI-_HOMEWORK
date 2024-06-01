@@ -64,14 +64,14 @@ The script's main functionality is divided into several functions that correspon
 Make sure the script has executable permissions. You can grant execute permission using the following command: chmod +x todo.sh
 
 ### Commands
-- **List Today's Tasks (Default)**:
+- **List Today's Tasks (Default):**
 
 ```bash
 ./todo.sh
 ```
 Lists all tasks scheduled for today, categorized by completion status.
 
-- **Create a Task**:
+- **Create a Task:**
 ```bash
 ./todo.sh create
 ```
@@ -83,31 +83,31 @@ Prompts the user to enter task details and adds the task to the list.
 ```
 Displays the list of tasks and prompts the user to enter the ID of the task to update. Allows modification of task details.
 
-- **Delete a Task**:
+- **Delete a Task:**
 ```bash
 ./todo.sh delete
 ```
 Displays the list of tasks and prompts the user to enter the ID of the task to delete.
 
-- ***Show a Task**:
+- ***Show a Task:**
 ```bash
 ./todo.sh show
 ```
 Prompts the user to enter the title of the task to display its details.
 
-- ***List Tasks by Day***:
+- **List Tasks by Day:**
 ```bash
 ./todo.sh listbyday
 ```
 Prompts the user to enter a date and lists tasks scheduled for that day, categorized by completion status.
 
-- ***Search Tasks by Title***:
+- **Search Tasks by Title:**
 ```bash
 ./todo.sh search
 ```
 Prompts the user to enter a title and displays tasks that match the title.
 ### Example Workflow
-Add a Task:
+- **Add a Task:**
 ```bash
 ./todo.sh create
 # Suivez les invites pour entrer les détails de la tâche :
@@ -117,7 +117,7 @@ Add a Task:
 # Date d'échéance : 2024-06-02
 # Complétion : non
 ```
-List Today's Tasks:
+- **List Today's Tasks:**
 ```bash
 ./todo.sh
 # Tâches pour aujourd'hui (2024-06-01) :
@@ -127,7 +127,7 @@ List Today's Tasks:
 # Tâches complétées :
 # ID: 7 - Titre: Faire du sport - Description: Aller courir au parc pendant 30 minutes. - Localisation: Parc - Date: 2024-06-01 - Complétée: oui
 ```
-Update a Task:
+- **Update a Task:**
 ```bash
 ./todo.sh update
 Liste des tâches :
