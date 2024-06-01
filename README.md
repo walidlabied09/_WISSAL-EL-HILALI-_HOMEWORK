@@ -61,8 +61,10 @@ The script's main functionality is divided into several functions that correspon
 ## Script Usage
 
 ### Running the Script
-Make sure the script has executable permissions. You can grant execute permission using the following command: chmod +x todo.sh
-
+Make sure the script has executable permissions. You can grant execute permission using the following command: 
+```bash
+chmod +x todo.sh
+``
 ### Commands
 - **List Today's Tasks (Default):**
 
