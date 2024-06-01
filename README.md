@@ -117,6 +117,16 @@ Add a Task:
 # Date d'échéance : 2024-06-02
 # Complétion : non
 ```
+List Today's Tasks:
+```bash
+./todo.sh
+# Tâches pour aujourd'hui (2024-06-01) :
+# Tâches non complétées :
+# ID: 1 - Titre: Acheter des courses - Description: Acheter du lait, des œufs, et du pain - Localisation: Supermarché - Date: 2024-06-01 - Complétée: non
+# ID: 4 - Titre: Football - Description: 11 VS 11 - Localisation: Rabat - Date: 2024-06-01 - Complétée: non
+# Tâches complétées :
+# ID: 7 - Titre: Faire du sport - Description: Aller courir au parc pendant 30 minutes. - Localisation: Parc - Date: 2024-06-01 - Complétée: oui
+```
 ### Error Handling
 - The script includes error handling for invalid input, such as empty titles, invalid dates, and non-existent task IDs.
 - Default values are provided for some fields if the user input is invalid or left empty.
